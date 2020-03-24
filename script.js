@@ -9,10 +9,8 @@ let fName = "Success";
 
     console.log(courses[i] );
  }
-
     
 
- 
  const data = [];
 
  for (let i=0; i<=200; i++) {
