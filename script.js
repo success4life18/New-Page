@@ -1,26 +1,32 @@
-let fName = "Success";
-    lName = "Ndubuisi";
-    fullName = fName + " " + lName;
+const data = [
+    { principal: 2500, time: 1.8 },
+    { principal: 1000, time: 5 },
+    { principal: 3000, time: 1 },
+    { principal: 2000, time: 3 },
+];
 
- console.log(fullName);
+let rate = 0;
+let interest = 0;
+let interestData = [];
 
- let courses = ["Html", "Css", "Js",];
- for (let i=0; i < courses.length; i++){
-
-    console.log(courses[i] );
- }
-    
-
- const data = [];
-
- for (let i=0; i<=200; i++) {
-
-   if (i%3===0) {
-
-     data.push(i);
-
-   }
-
- }
-
- console.log(data);
+function interestCalculator(arr) {
+    arr.forEach((element) => {
+        if (element.principal < 2500 || element.time <= 1)
+            rate = 2;
+        else if (element.principal >= 2500 && element.time >= 3) rate = 4;
+        else if (element.principal >= 2500 && (element.time > 1 && element.time < 3))
+            rate = 3;
+        else
+            rate = 1;
+        interest = (element.principal * rate * element.time) / 100;
+        interestData.push({
+            principal: element.principal,
+            rate,
+            time: element.time,
+            interest
+        });
+    });
+    console.log(interestData);
+    return interestData;
+};
+interestCalculator(data);
