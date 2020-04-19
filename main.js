@@ -24,4 +24,4 @@ function myNumber(maxNumber = 100) {
      
 };
 myNumber(100);
-myNumber(80);
+myNumber(30);
