@@ -1,4 +1,4 @@
-function NumberReplacer(maxNumber = 100) {
+function myNumber(maxNumber = 100) {
     let minNumber = 0
     let numberRange = [...Array(maxNumber).keys()].map(n => n + 1)
     let output = [];
@@ -23,5 +23,5 @@ function NumberReplacer(maxNumber = 100) {
 
      
 };
-NumberReplacer(100);
-NumberReplacer(80);
+myNumber(100);
+myNumber(80);
